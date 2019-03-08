@@ -9,7 +9,7 @@ import static basemod.DevConsole.logger;
 /**
  * @author wsk1103
  * @date 2019/3/8
- * @description 描述
+ * @description 启动程序
  */
 @SpireInitializer
 public class Gain implements PostInitializeSubscriber,
