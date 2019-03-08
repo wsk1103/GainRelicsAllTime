@@ -62,7 +62,6 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <!--<copy file="target/${name}.jar" tofile="../_ModTheSpire/mods/${name}.jar"/>-->
                             </target>
                         </configuration>
                         <goals>
