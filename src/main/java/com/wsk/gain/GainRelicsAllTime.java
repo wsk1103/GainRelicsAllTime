@@ -37,6 +37,8 @@ public class GainRelicsAllTime {
             tier = AbstractRelic.RelicTier.SHOP;
         }
         rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(tier)));
-
+//        ArrayList<AbstractCard> tmpPool = new ArrayList<>();
+//        ArrayList<AbstractCard> list = AbstractDungeon.player.getCardPool(tmpPool);
+//        System.out.println(list);
     }
 }
