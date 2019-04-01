@@ -1,3 +1,4 @@
+/*
 package com.wsk.gain;
 
 import com.badlogic.gdx.graphics.Color;
@@ -9,11 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 
+*/
 /**
  * @author wsk1103
  * @date 2019/3/9
  * @description 改变背景图片
- */
+ *//*
+
 @SpirePatch(
         clz = TheBottomScene.class,
         method = "renderCombatRoomBg",
@@ -26,12 +29,14 @@ public class ChangeBackground {
     public ChangeBackground() {
     }
 
-    /**
+    */
+/**
      * 方法名必须为Prefix
      * @param tbs
      * @param sb
      * @return SpireReturn<Object>
-     */
+     *//*
+
     public static SpireReturn<Object> Prefix(TheBottomScene tbs, SpriteBatch sb) {
         a++;
 //        if (AbstractDungeon.player.hasPower("Group")) {
@@ -68,3 +73,4 @@ public class ChangeBackground {
         }
     }
 }
+*/
