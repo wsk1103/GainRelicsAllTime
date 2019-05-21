@@ -1,6 +1,5 @@
 package com.wsk.gain;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
@@ -37,8 +36,8 @@ public class Load {
 //        bg = atlas.findRegion("bg");
 //        atlaso = new TextureAtlas(Gdx.files.internal("EndingSS/scene.atlas"));
 //        bgo = atlaso.findRegion("bg");
-        atlas5 = new TextureAtlas(Gdx.files.internal("ValleyScene/scene.atlas"));
-        bg5 = atlas5.findRegion("bg");
+//        atlas5 = new TextureAtlas(Gdx.files.internal("ValleyScene/scene.atlas"));
+//        bg5 = atlas5.findRegion("bg");
 //        atlas_plate = new TextureAtlas(Gdx.files.internal("Plate/scene.atlas"));
 //        plate = atlas_plate.findRegion("bg");
 //        atlas3 = new TextureAtlas(Gdx.files.internal("MyForestScene/scene.atlas"));
@@ -50,8 +49,8 @@ public class Load {
 //        bg4 = atlas4.findRegion("bg");
 //        atlas = new TextureAtlas(Gdx.files.internal("MyEndingScene/scene.atlas"));
 //        bg = atlas.findRegion("bg");
-        times = 1;
-        TrapActivated = 0;
+//        times = 1;
+//        TrapActivated = 0;
     }
 
 }

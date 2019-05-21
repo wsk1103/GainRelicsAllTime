@@ -1,5 +1,6 @@
 package com.wsk.gain;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
@@ -11,7 +12,7 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/3/8
- * @description 根据概率性，向奖励界面加入一个随机稀有度的遗物。
+ * @description 根据概率性，向奖励界面加入一个随机稀有度的遗物和3张金卡。
  */
 public class GainRelicsAllTime {
 
@@ -37,8 +38,13 @@ public class GainRelicsAllTime {
             tier = AbstractRelic.RelicTier.SHOP;
         }
         rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(tier)));
-//        ArrayList<AbstractCard> tmpPool = new ArrayList<>();
-//        ArrayList<AbstractCard> list = AbstractDungeon.player.getCardPool(tmpPool);
-//        System.out.println(list);
+        //加入金卡
+        RewardItem item = new RewardItem(AbstractCard.CardColor.COLORLESS);
+        ArrayList<AbstractCard> cards = item.cards;
+        cards.clear();
+        for (int i = 0; i < 3; i++) {
+            cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE));
+        }
+        rewards.add(item);
     }
 }
