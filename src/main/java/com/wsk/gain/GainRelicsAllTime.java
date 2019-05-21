@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author wsk1103
@@ -15,6 +14,8 @@ import java.util.Random;
  * @description 根据概率性，向奖励界面加入一个随机稀有度的遗物和3张金卡。
  */
 public class GainRelicsAllTime {
+
+    private static Queue<AbstractCard> cardList = null;
 
     public void receiveRewards(ArrayList<RewardItem> rewards) {
         if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
@@ -39,11 +40,18 @@ public class GainRelicsAllTime {
         }
         rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(tier)));
         //加入金卡
+        if (cardList == null || cardList.size() < 3) {
+            cardList = new PriorityQueue<>();
+            List<AbstractCard> randomCard = AbstractDungeon.rareCardPool.group;
+            //乱序一下
+            Collections.shuffle(randomCard);
+            cardList.addAll(randomCard);
+        }
         RewardItem item = new RewardItem(AbstractCard.CardColor.COLORLESS);
         ArrayList<AbstractCard> cards = item.cards;
         cards.clear();
         for (int i = 0; i < 3; i++) {
-            cards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE));
+            cards.add(cardList.poll());
         }
         rewards.add(item);
     }
