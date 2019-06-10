@@ -1,8 +1,8 @@
 ﻿{
   "modid": "GainRelicsAllTime",
-  "name": "Function-GainRelicsAllTime",
+  "name": "Function-Run",
   "author_list": ["sky"],
-  "description": "战斗胜利后，必定获得遗物。\nAfter the victory of the battle, you are sure to gain one relic. \n GitHub：https://github.com/wsk1103/GainRelicsAllTime",
+  "description": "However, this approach is not recommended.",
   "dependencies": ["basemod"],
   "version": "1.1.0",
   "sts_version": "03-08-2019",
