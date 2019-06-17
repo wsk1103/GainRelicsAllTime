@@ -17,6 +17,8 @@ public class CombatRewardScreenPatch {
     public static void insert(CombatRewardScreen instance) {
         GainRelicsAllTime allTime = new GainRelicsAllTime();
         allTime.receiveRewards(instance.rewards);
+        GainRareCard gainRareCard = new GainRareCard();
+        gainRareCard.receiveRewards(instance.rewards);
     }
 
 
