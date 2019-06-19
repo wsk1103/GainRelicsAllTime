@@ -22,7 +22,7 @@ public class Gain implements PostInitializeSubscriber,
 
     public static void initialize() {
         logger.info("=========================初始化角色Mod数据=========================");
-        new Gain();//初始化角色mod，必备。
+        new Gain();
         logger.info("===========================角色Mod初始化成功===========================");
     }
 
